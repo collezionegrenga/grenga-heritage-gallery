@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "./",  // <--- QUESTA RIGA RISOLVE IL PROBLEMA DEL "SITO BIANCO"
+  base: "/",  // <--- QUESTA RIGA RISOLVE IL PROBLEMA DEL "SITO BIANCO"
   server: {
     host: "::",
     port: 8080,
