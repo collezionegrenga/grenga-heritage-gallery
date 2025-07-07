@@ -5,28 +5,62 @@ import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 
 const Catalogo = () => {
-  // Placeholder items - will be replaced with real data later
   const catalogItems = [
     {
       id: 1,
-      nome: "Esempio Opera d'Arte",
+      nome: "Poltrona Papale",
       epoca: "XVIII secolo",
-      descrizione: "Descrizione breve dell'oggetto",
-      prezzo: "Prezzo su richiesta"
+      descrizione: "Mobile ecclesiastico di pregio con decorazioni barocche",
+      prezzo: "Prezzo su richiesta",
+      immagine: "/lovable-uploads/a181c675-1405-400b-bf99-705b14627c24.png"
     },
     {
       id: 2,
-      nome: "Strumento Musicale Antico",
+      nome: "Violino Antico",
       epoca: "XIX secolo", 
-      descrizione: "Descrizione breve dell'oggetto",
-      prezzo: "Prezzo su richiesta"
+      descrizione: "Strumento musicale d'epoca in ottimo stato di conservazione",
+      prezzo: "Prezzo su richiesta",
+      immagine: "/lovable-uploads/1678f04a-1ab7-44eb-a61f-ed08b5999e39.png"
     },
     {
       id: 3,
-      nome: "Mobile Ecclesiastico",
+      nome: "Sacra Famiglia",
       epoca: "XVII secolo",
-      descrizione: "Descrizione breve dell'oggetto", 
-      prezzo: "Prezzo su richiesta"
+      descrizione: "Dipinto religioso con cornice dorata originale", 
+      prezzo: "Prezzo su richiesta",
+      immagine: "/lovable-uploads/b3405b6e-7da2-43e1-9467-5876d10b7fd5.png"
+    },
+    {
+      id: 4,
+      nome: "Spioncino di Castello",
+      epoca: "XVI secolo",
+      descrizione: "Pannello ligneo intagliato a mano con decorazioni floreali",
+      prezzo: "Prezzo su richiesta",
+      immagine: "/lovable-uploads/4b3e0a5d-511f-4e6e-983f-c13e92020305.png"
+    },
+    {
+      id: 5,
+      nome: "Opera di Del Fabbretto",
+      epoca: "XIX secolo",
+      descrizione: "Acquerello dell'artista italiano con cornice dorata",
+      prezzo: "Prezzo su richiesta",
+      immagine: "/lovable-uploads/e6edb06b-25d4-42a7-86d6-8c9e8d1427b8.png"
+    },
+    {
+      id: 6,
+      nome: "Arazzo Antico",
+      epoca: "XVIII secolo",
+      descrizione: "Tessuto pregiato con scene mitologiche su telaio originale",
+      prezzo: "Prezzo su richiesta",
+      immagine: "/lovable-uploads/936f095d-67fd-4e6f-82dc-98378521b164.png"
+    },
+    {
+      id: 7,
+      nome: "Natura Morta di Saetti",
+      epoca: "XX secolo",
+      descrizione: "Dipinto moderno dell'artista con soggetti di vita quotidiana",
+      prezzo: "Prezzo su richiesta",
+      immagine: "/lovable-uploads/179ac235-cb59-427e-9fad-0000137de6d2.png"
     }
   ];
 
@@ -34,46 +68,41 @@ const Catalogo = () => {
     <Layout>
       <div className="min-h-screen bg-grenga-ivory py-16">
         <div className="container mx-auto px-4">
-          <h1 className="font-playfair text-4xl md:text-5xl font-bold text-grenga-text text-center mb-4">
+          <h1 className="font-playfair text-5xl font-bold text-grenga-text text-center mb-4">
             Catalogo
           </h1>
           
-          <p className="font-inter text-lg text-grenga-text text-center mb-12">
+          <p className="font-inter text-xl text-grenga-text text-center mb-12">
             Scopri i tesori della nostra collezione
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {catalogItems.map((item) => (
               <Card 
                 key={item.id} 
-                className="border-grenga-bronze/30 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 bg-white"
+                className="bg-white border border-grenga-bronze rounded-lg shadow-md hover:scale-105 transition-all duration-300"
               >
-                <CardContent className="p-6">
-                  {/* Placeholder for image */}
-                  <div className="w-full h-64 bg-gray-200 rounded-lg mb-4 flex items-center justify-center">
-                    <span className="text-gray-400 font-inter">
-                      [Immagine da inserire]
-                    </span>
-                  </div>
+                <CardContent className="p-4">
+                  <img 
+                    src={item.immagine}
+                    alt={item.nome}
+                    className="w-full mb-3 rounded object-cover"
+                  />
                   
-                  <h3 className="font-playfair text-xl font-semibold text-grenga-text mb-2">
+                  <h3 className="font-playfair text-2xl font-bold text-grenga-text mb-2">
                     {item.nome}
                   </h3>
                   
-                  <p className="font-inter text-sm text-grenga-text/70 mb-2">
-                    {item.epoca}
+                  <p className="font-inter text-sm text-grenga-text mb-3 leading-relaxed">
+                    {item.epoca} - {item.descrizione}
                   </p>
                   
-                  <p className="font-inter text-sm text-grenga-text mb-4">
-                    {item.descrizione}
-                  </p>
-                  
-                  <p className="font-inter text-lg font-medium text-grenga-text mb-4">
+                  <p className="font-inter italic text-sm text-grenga-dark-brown mb-4">
                     {item.prezzo}
                   </p>
                   
                   <Link to="/contatti">
-                    <Button className="w-full bg-grenga-bronze hover:bg-grenga-dark-brown text-white font-inter transition-colors duration-300">
+                    <Button className="w-full bg-grenga-dark-brown hover:scale-95 text-white font-inter font-medium transition-all duration-200 rounded-md">
                       Contattaci per trattativa
                     </Button>
                   </Link>
