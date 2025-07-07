@@ -1,4 +1,3 @@
-
 import Layout from '@/components/Layout';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -10,7 +9,7 @@ const Catalogo = () => {
       id: 1,
       nome: "Poltrona Papale",
       epoca: "XIX secolo",
-      descrizione: "Maestosa poltrona cerimoniale, dallo schienale alto e imbottitura in velluto nero, con intagli lignei e decorazioni dorate. Secondo tradizione, appartenuta a Papa Pio IX. La sua eleganza e la qualità artigianale la rendono un pezzo di pregio assoluto, ideale per ambienti ecclesiastici, museali o effigi di alto livello.",
+      descrizione: "Maestosa poltrona cerimoniale, dallo schienale alto con intagli lignei e decorazioni dorate. Secondo tradizione, appartenuta a Papa Pio IX. La sua eleganza e la qualità artigianale la rendono un pezzo di pregio assoluto, ideale per ambienti ecclesiastici, museali o effigi di alto livello.",
       prezzo: "Prezzo su richiesta",
       immagine: "/lovable-uploads/a181c675-1405-400b-bf99-705b14627c24.png"
     },
